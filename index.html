@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>About HeYang Yuan</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class = "nav container">
+            <a href="#" class = "nav__logo">HeYang Yuan</a>
+            <div class = "nav__menu" id ="nav-menu">
+               <ul class = "nav__list">
+                  <li>
+                     <a href = "#home" class = "nav__link">Home</a>
+                  </li>
+                  
+                  <li>
+                     <a href = "#aboutme" class = "nav__link">About Me</a>
+                  </li>
+                  <li>
+                     <a href = "#experience" class = "nav__link">Hobbies</a>
+                  </li>
+
+                  <!--<li>
+                     <a href = "#personalinterest" class = "nav__link">Personal Interests</a>
+                  </li>-->
+                  
+                  <li>
+                     <a href = "#contactme" class = "nav__link">Contact Me</a>
+                  </li>
+               </ul>
+               <!--Close Button-->
+               <div class = "nav__close" id ="nav-close">
+                  <i class="ri-close-large-line"></i>
+                  
+
+               </div>
+            </div>
+            <!--Toggle Button-->
+            <div class ="nav__toggle" id = "nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+
+
+
+         </nav>
+      </header>
+      
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <!--这个 HTML 代码创建了一个个人主页的介绍部分，其中包含个人的照片、姓名、职业信息，以及一个用于滚动到下一个部分（如“经验”部分）的按钮。我们逐步分析：-->
+         <!--<section class="home section" id="home">
+            <section>: 这是一个语义化的 HTML 元素，用来定义页面中的不同部分。这一部分定义的是主页的介绍内容。
+            class="home section": 使用两个类，一个是 home 表示这是主页部分，另一个是 section，可以用来添加通用的样式。
+            id="home": 设置 id 为 home，便于通过链接或 JavaScript 进行定位和操作。-->
+         <section class="home section" id="home">
+            <!-- <div class="home__container container grid">
+            home__container: 这个类通常用于将内容包裹在容器中，以便对内容进行布局和样式设置。
+            container: 一般表示具有一定宽度和边距的容器，通常用于限制页面内容的最大宽度。
+            grid: 使用了 CSS Grid 布局，让容器内的元素根据网格系统进行布局。-->
+            <div class = "home__container container grid">
+               <!--<img src="assets/img/home-perfil.png" alt="image" class="home__img">
+                  <img>: 用于在页面上显示图片。
+                  src="assets/img/home-perfil.png": 图片的路径，表示个人照片或头像。
+                  alt="image": 图片的替代文本，图片加载失败时会显示这段文字，且有利于 SEO 和屏幕阅读器。
+                  class="home__img": 为图片应用了 home__img 样式类，这个类可能控制图片的大小、对齐等样式。-->
+               <img src = "assets/img/IMG_20220915_215943.jpg" alt="please refresh page" class ="home__img">
+               <div class ="home__date">
+                  <!--<div class="home__date"> home__date: 这个类可能是自定义的，用来包裹个人信息（姓名和职业）的 div 元素。-->
+                  <h1 class="home__name">HeYang Yuan</h1>
+                  <h3 class = "home__profession">Graduated from York University</h3>
+                  <h4 class = "home__profession">Bachelor of Compuer Science</h4> 
+               </div>
+               <!--<a href="#experience" class="home__scroll">
+                  <a>: 创建一个链接，这里用于滚动到页面的另一个部分（#experience 是目标部分的 ID）。
+                  class="home__scroll": 定义了滚动按钮的样式。-->
+               <a href = "#aboutme" class = "home__scroll">
+                  <div class = "home__scroll-box">
+                     <i class="ri-arrow-down-line"></i>
+                  </div>
+                  <!--<span class="home__scroll-text">Recent Works</span>
+                        <span>: 这是一个内联元素，包含滚动按钮的文本内容 "Recent Works"。用户点击滚动按钮时可以看到提示文字。-->
+                  <span class = "home__scroll-text">About Me</span>
+               </a>
+            </div>
+
+         </section>
+         
+         <!--==================== INFO ====================-->
+         <section class="info section" id="aboutme">
+            <h2 class="section__title">ABOUT ME</h2>
+            <div class = "info__container container grid">
+               <!-- About-->
+               <div class = "about grid">
+                  <div class="about__content">
+                     <h3 class="info__title">ABOUT ME</h3>
+                     <p class = about__description>
+                        with an Honours Bachelor of Science in Computer Science from York University. During my studies, 
+                        I gained extensive experience in programming, particularly in languages like Python, Java, C, and JavaScript. 
+                        I am also proficient in a variety of tools and technologies, including PyTorch, TensorFlow, SQL, Unity, and Adobe creative tools, 
+                        as well as frameworks for machine learning and data analysis. <br>
+                        <br>
+                        I consider myself a fast learner, able to quickly adapt to new tools and technologies, 
+                        and I enjoy solving complex problems. Through my project experiences, 
+                        I’ve developed strong teamwork skills and the ability to collaborate with individuals from different fields. 
+                        I also excel in time management and multitasking, consistently completing tasks efficiently and on schedule.
+                     </p>
+                     <!--在这边更换resume-->
+                     <a href = "assets/pdf/HeYang Yuan Resume.pdf" download ="" target="_blank" class = "button about__button">Download Resume</a>
+                  </div>
+                  <img src = "assets/img/IMG_20220915_215943.jpg" alt="refresh page" class="about__img">
+               
+               </div>
+               <!-- Experience-->
+               <div class = "experience">
+                  <h3 class="info__title">PROFESSIONAL EXPERIENCE</h2>
+                  <div class = "experience__content grid">
+
+                     <!--Experience one-->
+                     <div class = "experience__data grid">
+                        <h2 class="experience__company">York University & NHK</h2>
+
+                        <div>
+                           <h3 class="experience__profession">Research Project: Gloss-Free Transformation: Converting Japanese Text into Sign Language Videos</h3>
+                           <span class = "experience__date">Sept 2023- Jan 2024</span>
+                           <p class = "experience__discription">Develop a model to directly translate Japanese text into JSL videos without relying on gloss annotations, 
+                              aimed at solving the real-world problem which the goal was to increasing accessibility and reducing human translator costs.</p>
+                        </div>
+                     </div>
+                     
+
+                     <!-- Experience two-->
+                     <div class = "experience__data grid">
+                        <h2 class="experience__company">York University</h2>
+
+                        <div>
+                           <h3 class="experience__profession">Comparative Analysis of Sentiment Classification Approaches for Yelp Reviews: Bag of Words vs. Text Embedding</h3>
+                           <span class = "experience__date">Sept 2023 - Jan 2024</span>
+                           <p class = "experience__discription">Planned a comparative analysis framework to evaluate Bag of Words (BoW) and Text Embedding models for sentiment reviews classification and prediction on a dataset of more than 120k Yelp reviews.
+                              </p>
+                        </div>
+                     </div>
+
+                     <!--experience three-->
+                     <div class = "experience__data grid">
+                        <h2 class="experience__company">York University</h2>
+
+                        <div>
+                           <h3 class="experience__profession">Course Recommendation Application</h3>
+                           <span class = "experience__date">Jan - Apr 2022</span>
+                           <p class = "experience__discription"> An application for a course recommendation, outlining the use of decision tree algorithms to analyze student preferences and past courses. Created deliverables detailing the data sources and flow.</p>
+                        </div>
+                     </div>
+
+
+                  </div>
+               </div>
+
+
+
+
+               <!-- Skills-->
+               <div class = "skills">
+                  <h3 class="info__title">SKILLS</h3>
+                  <div class = "skills__content grid">
+
+                     <!-- First Skill-->
+                     <div class ="skills__box">
+                        <img src = "assets/img/python.png" alt="refresh" class = "skills__img">
+                        <span class = "skills__name">Python</span>
+                     </div>
+
+
+
+                     <!--Second SKill-->
+                     <div class ="skills__box">
+                        <img src = "assets/img/c-1.svg" alt="refresh" class = "skills__img">
+                        <span class = "skills__name">C (Programming Language)</span>
+                     </div>
+
+
+
+                     <!--third SKill-->
+                     <div class ="skills__box">
+                        <img src = "assets/img/java.svg" alt="refresh" class = "skills__img">
+                        <span class = "skills__name">Java</span>
+                     </div>
+
+                     <!--forth Skill-->
+                     <div class ="skills__box">
+                        <img src = "assets/img/info-javascript.svg" alt="refresh" class = "skills__img">
+                        <span class = "skills__name">JavaScript</span>
+                     </div>
+
+
+                     <!--fifth Skill-->
+                     <div class ="skills__box">
+                        <img src = "assets/img/info-css.svg" alt="refresh" class = "skills__img">
+                        <span class = "skills__name">CSS</span>
+                     </div>
+
+                     <!--sixth Skill-->
+                     <div class ="skills__box">
+                        <img src = "assets/img/info-html.svg" alt="refresh" class = "skills__img">
+                        <span class = "skills__name">HTML</span>
+                     </div>
+
+                  </div>
+               </div>
+               <div class="strength__container container grid">
+
+                  <article class = "strength__card">
+                     <!--这下面的icon到后面会换-->
+                     <img src = "assets/img/icons8-learning-ios-17-outlined/icons8-learning-50.png" alt="refresh" class = "strength__icon">
+                     <h3 class="strength__title">Proactive Learning/Quick Learner</h3>
+                     <p class="strength__discription">: Showing a strong aptitude for learning especially during JSL project since there is a very short time frame to learn the tools.
+                        </p>
+                  </article>
+   
+   
+                  <article class = "strength__card">
+                     <img src = "assets/img/icons8-problem-solving-ios-17-outlined/icons8-problem-solving-50.png" alt="refresh" class = "strength__icon">
+                     <h3 class="strength__title">Problem Solving</h3>
+                     <p class="strength__discription">: Identify issues, analyze information, and implement effective solutions when group project is occurring unexpected error.</p>
+                  </article>
+   
+   
+                  <article class = "strength__card">
+                     <img src = "assets/img/icons8-team-collaboration-ios-17-outlined/icons8-team-collaboration-50.png" alt="refresh" class = "strength__icon">
+                     <h3 class="strength__title">Team Collaboration</h3>
+                     <p class="strength__discription"> Effectively collaborated with diverse teams, including both students and professionals, in a multicultural research project.</p>
+                  </article>
+   
+   
+                  <article class = "strength__card">
+                     <img src = "assets/img/icons8-time-management-ios-17-outlined/icons8-time-management-50.png" alt="refresh" class = "strength__icon">
+                     <h3 class="strength__title">Time Management</h3>
+                     <p class="strength__discription">Ensured all tasks were completed within project deadlines, consistently submitting all work on time throughout university studies, with no missed deadlines.</p>
+                  </article>
+   
+   
+                  <article class = "strength__card">
+                     <img src = "assets/img/icons8-multitasking-64.png" alt="refresh" class = "strength__icon">
+                     <h3 class="strength__title">Multitasking</h3>
+                     <p class="strength__discription">Able to work multiple tasks simultaneously, ensuring high-quality results while maintaining efficiency, consistently submitting all work on time throughout the university studies.
+                        </p>
+                  </article>
+   
+                  <article class = "strength__card">
+                     <img src = "assets/img/icons8-motivated-64.png" alt="refresh" class = "strength__icon">
+                     <h3 class="strength__title">Highly Motivated</h3>
+                     <p class="strength__discription">Strong work ethic and high performance in various tasks and responsibilities, even during peak hours and demanding shifts.</p>
+                  </article>
+   
+   
+                  <article class = "strength__card">
+                     <img src = "assets/img/icons8-details-ios-17-outlined/icons8-details-50.png" alt="refresh" class = "strength__icon">
+                     <h3 class="strength__title">Detail Oriented</h3>
+                     <p class="strength__discription"> Always to focus on the small but important details, also ensuring complete work in fast pace and high quality.</p>
+                  </article>
+   
+                  <article class = "strength__card">
+                     <img src = "assets/img/icons8-organizing-64.png" alt="refresh" class = "strength__icon">
+                     <h3 class="strength__title">Organizing</h3>
+                     <p class="strength__discription">Able to keep the work environment and tasks well organized, and ensure that work is done efficiently.</p>
+                  </article>
+   
+                  <article class = "strength__card">
+                     <img src = "assets/img/icons8-adaptable-64.png" alt="refresh" class = "strength__icon">
+                     <h3 class="strength__title">Adaptability</h3>
+                     <p class="strength__discription"> Flexible in adjusting to changing requirements and environments, such as modifying the JSL project model based on instructor feedback.</p>
+                  </article>
+   
+   
+   
+   
+               </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+               
+         </section>
+
+
+
+
+
+
+
+         <!--==================== WORKS ====================-->
+         <!--创建工作类展示-->
+         <section class="work section" id="experience">
+            <h2 class= "section__title">Hobbies</h2>
+            <div class = "work__container container grid">
+
+
+
+
+               <article class="work__card">
+                  <a href = "#" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">3D Modeling</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/1728183260036.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+               
+
+
+               <article class="work__card">
+                  <a href = "drawing.html" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Drawing</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/QQ图片202010222347462.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+
+
+
+
+               <article class="work__card">
+                  <a href = "airsoft.html" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Airsoft</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/IMG_20220915_215943.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+
+
+               <article class="work__card">
+                  <a href = "#" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Badminton</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/badminton.png" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+
+
+               <article class="work__card">
+                  <a href = "#" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Table Tennis</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/table-tennis.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+
+
+               <article class="work__card">
+                  <a href = "https://space.bilibili.com/9826917?spm_id_from=333.1007.0.0" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Video Editing</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/bilibili.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+            </div>
+         </section>
+
+
+         <!--==================== SERVICES --》 Strength ====================-->
+         <!--
+         <section class="personalinterest section" id="personalinterest">
+            <h2 class = "section__title">Personal Interest</h2>
+            <div class = "work__container container grid">
+               <article class="work__card">
+                  <a href = "#" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Work 1</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/work-1.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+
+
+               <article class="work__card">
+                  <a href = "#" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Work 2</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/work-2.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+
+
+               <article class="work__card">
+                  <a href = "#" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Work 3</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/work-3.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+
+
+               <article class="work__card">
+                  <a href = "#" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Work 4</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/work-4.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+
+
+               <article class="work__card">
+                  <a href = "#" target = '_blank' class = "work__link">
+                     <h2 class = "work__title">Work 5</h2>
+                     <p class="work__description">
+                     add description of work
+                     </p>
+                     <img src="assets/img/work-5.jpg" alt="refresh the page" class = "work__img">
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+               </article>
+            </div>
+
+         </section>  -->
+
+
+
+         <!--未来我会加一个hobby-->
+
+
+
+         <!--==================== CONTACT ====================-->
+         <section class="contact section" id="contactme">
+
+            <h2 class = "section__title">CONTACT ME</h2>
+               <h3 class = "contact__info">Emails: yuanheyang1232@gmail.com</h3>
+               <h3 class = "contact__info">Phone: 647-667-3854</h3>
+
+            <div class="contact__social grid">
+
+               <!--Social Contact 1-->
+               <a href = "https://www.linkedin.com/in/he-yang-yuan-466407311/" target ="_blank" class = "contact__social-link">
+                  <i class="ri-linkedin-box-line"></i>
+                  <span>LinkedIn</span>
+               </a>
+
+               <!--Social Contact 2-->
+               <a href = "https://www.facebook.com/henry.yuan.5439" target ="_blank" class = "contact__social-link">
+                  <i class="ri-facebook-box-line"></i>
+                  <span>Facebook</span>
+               </a>
+
+
+            </div>
+
+
+
+
+
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <ul class="footer__links">
+
+               <li>
+                  <a href="#home" class="footer__link">Home</a>
+               </li>
+
+               <li>
+                  <a href="#experience" class="footer__link">Experience</a>
+               </li>
+
+               <li>
+                  <a href="#aboutme" class="footer__link">About Me</a>
+               </li>
+
+
+               <!--
+               <li>
+                  <a href="#personalinterest" class="footer__link">Personal Interest</a>
+               </li>
+               -->
+               
+            </ul>
+
+
+
+         </div>
+
+
+
+
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      
+      <a href = "#" class = "scroll__up" id = "scroll-up">
+         <div class = "scroll__up-box">
+            <i class="ri-arrow-up-line"></i>
+         </div>
+         
+      </a>
+
+
+
+
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src=""></script>
+
+      <!--=============== EMAIL JS ===============-->
+      <script src=""></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
