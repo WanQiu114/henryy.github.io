@@ -75,7 +75,7 @@ function AtomIcon({ type }) {
 function Hero() {
   const [isChinese, setIsChinese] = useState(false)
   const [role, setRole] = useState(0)
-  const cvUrl = `${import.meta.env.BASE_URL}assets/pdf/HeYang_Yuan_CV.pdf`
+  const cvUrl = '/henryy.github.io/assets/pdf/HeYang_Yuan_CV.pdf'
 
   useEffect(() => {
     const nameTimer = setInterval(() => setIsChinese(value => !value), 4200)
