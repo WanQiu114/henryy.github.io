@@ -93,7 +93,7 @@ function Hero() {
         <article className="identity-card">
           <p className="card-kicker">HELLO, I’M</p>
           <div className={'name-switch ' + (isChinese ? 'chinese' : '')}>
-            <span>{isChinese ? '苑赫洋' : 'HeYang Yuan'}</span>
+            <span key={isChinese ? 'zh' : 'en'}>{isChinese ? '苑赫洋' : 'HeYang Yuan'}</span>
           </div>
           <div className="card-rule"/>
           <p className="card-label">CURRENTLY</p>
