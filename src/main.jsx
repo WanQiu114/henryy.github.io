@@ -75,12 +75,34 @@ function AtomIcon({ type }) {
 function Hero() {
   const [isChinese, setIsChinese] = useState(false)
   const [role, setRole] = useState(0)
+  const cvUrl = `${import.meta.env.BASE_URL}assets/pdf/HeYang_Yuan_CV.pdf`
 
   useEffect(() => {
     const nameTimer = setInterval(() => setIsChinese(value => !value), 4200)
     const roleTimer = setInterval(() => setRole(value => (value + 1) % roles.length), 2200)
     return () => { clearInterval(nameTimer); clearInterval(roleTimer) }
   }, [])
+
+  const handleCvDownload = async (event) => {
+    event.preventDefault()
+
+    try {
+      const response = await fetch(cvUrl)
+      if (!response.ok) throw new Error('CV file not found')
+
+      const blob = await response.blob()
+      const objectUrl = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = objectUrl
+      link.download = 'HeYang_Yuan_CV.pdf'
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+      setTimeout(() => URL.revokeObjectURL(objectUrl), 0)
+    } catch (error) {
+      window.open(cvUrl, '_blank', 'noopener,noreferrer')
+    }
+  }
 
   return <section className="hero" id="home">
     <nav className="nav">
@@ -93,7 +115,7 @@ function Hero() {
         <p className="eyebrow">Toronto, Canada · Available for research & collaboration</p>
         <h1>Building thoughtful<br/><em>software systems.</em></h1>
         <p className="intro">I explore reliable, secure and human-centred AI for software engineering — and turn ideas into polished digital experiences.</p>
-        <div className="hero-actions"><a className="button button-dark" href="#publications">Explore my research <span>↓</span></a><a className="text-link" href={`${import.meta.env.BASE_URL}assets/pdf/HeYang_Yuan_CV.pdf`} download="HeYang_Yuan_CV.pdf" target="_blank" rel="noreferrer">View CV <span>↗</span></a></div>
+        <div className="hero-actions"><a className="button button-dark" href="#publications">Explore my research <span>↓</span></a><a className="text-link" href={cvUrl} onClick={handleCvDownload} rel="noreferrer">View CV <span>↗</span></a></div>
       </div>
       <div className="orbit-scene" aria-label="Introduction card with rotating technology orbit">
         <div className="orbit orbit-one"/><div className="orbit orbit-two"/>
