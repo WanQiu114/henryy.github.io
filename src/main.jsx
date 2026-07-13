@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
+import FootprintTrail from './footprintTrail'
 
 const roles = ['Graduate Student', 'Research Assistant', 'Software Developer', 'Web Developer', 'Web Designer']
 
@@ -75,6 +76,7 @@ function AtomIcon({ type }) {
 function Hero() {
   const [isChinese, setIsChinese] = useState(false)
   const [role, setRole] = useState(0)
+  const [cardTilt, setCardTilt] = useState({ x: 0, y: 0 })
   const cvUrl = '/henryy.github.io/assets/pdf/HeYang_Yuan_CV.pdf'
 
   useEffect(() => {
@@ -104,6 +106,17 @@ function Hero() {
     }
   }
 
+  const handleCardMove = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect()
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top
+    const rotateY = ((x / rect.width) - 0.5) * 12
+    const rotateX = ((0.5 - (y / rect.height))) * 10
+    setCardTilt({ x: rotateX, y: rotateY })
+  }
+
+  const resetCardTilt = () => setCardTilt({ x: 0, y: 0 })
+
   return <section className="hero" id="home">
     <nav className="nav">
       <a className="brand" href="#home">HY<span>.</span></a>
@@ -120,9 +133,17 @@ function Hero() {
       <div className="orbit-scene" aria-label="Introduction card with rotating technology orbit">
         <div className="orbit orbit-one"/><div className="orbit orbit-two"/>
         <div className="orbit-icons">
-          <i className="orbiter o-one"><AtomIcon type="code"/></i><i className="orbiter o-two"><AtomIcon type="brain"/></i><i className="orbiter o-three"><AtomIcon type="spark"/></i><i className="orbiter o-four"><AtomIcon type="cube"/></i><i className="orbiter o-five"><AtomIcon type="pen"/></i>
+          <i className="orbiter o-one"><AtomIcon type="code"/></i><i className="orbiter o-two"><AtomIcon type="brain"/></i><i className="orbiter o-three"><AtomIcon type="spark"/></i>
+          <img className="avatar-orbit avatar-orbit-left" src="/henryy.github.io/assets/img/my_pic.png" alt="My portrait" />
+          <img className="avatar-orbit avatar-orbit-right" src="/henryy.github.io/assets/img/my_logo.png" alt="My logo" />
+          <i className="orbiter o-four"><AtomIcon type="cube"/></i><i className="orbiter o-five"><AtomIcon type="pen"/></i>
         </div>
-        <article className="identity-card">
+        <article
+          className="identity-card"
+          onMouseMove={handleCardMove}
+          onMouseLeave={resetCardTilt}
+          style={{ transform: `translate(-50%, -50%) rotateX(${cardTilt.x}deg) rotateY(${cardTilt.y}deg)` }}
+        >
           <p className="card-kicker">HELLO, I’M</p>
           <div className={'name-switch ' + (isChinese ? 'chinese' : '')}>
             <span key={isChinese ? 'zh' : 'en'}>{isChinese ? '苑赫洋' : 'HeYang Yuan'}</span>
@@ -130,7 +151,7 @@ function Hero() {
           <div className="card-rule"/>
           <p className="card-label">CURRENTLY</p>
           <p className="role" key={role}>{roles[role]}</p>
-          <div className="card-meta"><span>AI4SE</span><span>•</span><span>WEB</span><span>•</span><span>RESEARCH</span></div>
+          <div className="card-meta"><span className="card-tag">AI4SE</span><span>•</span><span className="card-tag">WEB</span><span>•</span><span className="card-tag">RESEARCH</span></div>
         </article>
       </div>
     </div>
@@ -177,7 +198,13 @@ function App() {
     document.body.scrollTop = 0
   }, [])
 
-  return <><Hero/><Skills/><Publications/><About/></>
+  return <>
+    <FootprintTrail />
+    <Hero />
+    <Skills />
+    <Publications />
+    <About />
+  </>
 }
 
 createRoot(document.getElementById('root')).render(<App />)
