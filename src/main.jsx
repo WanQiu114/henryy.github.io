@@ -93,7 +93,7 @@ function Hero() {
         <p className="eyebrow">Toronto, Canada · Available for research & collaboration</p>
         <h1>Building thoughtful<br/><em>software systems.</em></h1>
         <p className="intro">I explore reliable, secure and human-centred AI for software engineering — and turn ideas into polished digital experiences.</p>
-        <div className="hero-actions"><a className="button button-dark" href="#publications">Explore my research <span>↓</span></a><a className="text-link" href={`${import.meta.env.BASE_URL}assets/pdf/HeYang_Yuan_CV.pdf`} target="_blank" rel="noreferrer">View CV <span>↗</span></a></div>
+        <div className="hero-actions"><a className="button button-dark" href="#publications">Explore my research <span>↓</span></a><a className="text-link" href={`${import.meta.env.BASE_URL}assets/pdf/HeYang_Yuan_CV.pdf`} download="HeYang_Yuan_CV.pdf" target="_blank" rel="noreferrer">View CV <span>↗</span></a></div>
       </div>
       <div className="orbit-scene" aria-label="Introduction card with rotating technology orbit">
         <div className="orbit orbit-one"/><div className="orbit orbit-two"/>
