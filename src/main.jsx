@@ -27,6 +27,16 @@ const experiences = [
     ],
   },
   {
+    company: 'York University', role: 'Research Assistant', date: 'Jan — Aug 2024',
+    summary: 'Supported a research team on AI and software engineering projects through experimentation, data analysis, and technical documentation, while also contributing 3D modeling and animation work in Unity.',
+    skills: ['Python', 'PyTorch', 'TensorFlow', 'Pandas', 'Unity', '3D Modeling', 'Animation', 'Git', 'LaTeX', 'Research Methods'],
+    tasks: [
+      { text: 'Collected, cleaned, and analyzed experimental datasets to support ongoing research questions.', skills: ['Python', 'Pandas', 'Research Methods'] },
+      { text: 'Used Unity to create 3D models and animations for research-related visualizations and demonstrations.', skills: ['Unity', '3D Modeling', 'Animation'] },
+      { text: 'Independently completed all related testing and animation work for the project, ensuring smooth implementation and presentation.', skills: ['Unity', 'Animation', 'Testing'] },
+    ],
+  },
+  {
     company: 'York University', role: 'Undergraduate Researcher', date: 'Sept — Dec 2023',
     summary: 'Developed a gloss-free Japanese sign-language translation pipeline with computer vision and NLP.',
     skills: ['Python', 'PyTorch', 'TensorFlow', 'BlazePose', 'OpenCV', 'BERT', 'MySQL'],
@@ -135,6 +145,17 @@ function About() {
  return <section className="about-section" id="about"><div className="about-card"><p className="eyebrow">03 / AT A GLANCE</p><h2>Researcher by<br/>curiosity. Builder<br/>by nature.</h2><div className="about-details"><p>Master of Information Systems & Technology at York University, supervised by Zhenhao Li.</p><p>My interests include intelligent code analysis, automatic program repair, reward engineering and security-aware software systems.</p><a className="button button-light" href="mailto:yuanheyang1232@gmail.com">Start a conversation <span>↗</span></a></div></div><footer><span>© 2026 HeYang Yuan</span><div><a href="https://www.linkedin.com/in/he-yang-yuan-466407311/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:yuanheyang1232@gmail.com">Email ↗</a></div></footer></section>
 }
 
-function App() { return <><Hero/><Skills/><Publications/><About/></> }
+function App() {
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }, [])
+
+  return <><Hero/><Skills/><Publications/><About/></>
+}
 
 createRoot(document.getElementById('root')).render(<App />)
